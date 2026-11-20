@@ -1,0 +1,5 @@
+{% macro render(node) -%}
+{% if node is string %}{{ node }}{% else %}
+{% set n = resolve(node) %}<{{ n.tag }}{% if n.classes %} class="{{ n.classes | join(' ') }}"{% endif %}{% for key, value in n.attrs.items() %}{% if value is sameas true %} {{ key }}{% elif value is not none and value is not sameas false %} {{ key }}="{{ value }}"{% endif %}{% endfor %}>{% if n.tag not in void_tags %}{% if n.text is not none %}{{ n.text }}{% endif %}{% for child in n.children %}{{ render(child) }}{% endfor %}</{{ n.tag }}>{% endif %}
+{% endif %}
+{%- endmacro %}

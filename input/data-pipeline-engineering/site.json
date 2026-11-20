@@ -1,0 +1,12 @@
+{
+  "title": "From Business Requirements to Production: Engineering a Data Pipeline | Sara Fernandez",
+  "description": "A practical guide to engineering a data pipeline, from business requirements and source modeling to incremental processing, deployment and production operations.",
+  "favicon_url": "https://lmwxqzustlrpfmbhvjbx.supabase.co/storage/v1/object/public/portfolio/img/favicon.ico",
+  "language": "en",
+  "body": {
+    "id": "top"
+  },
+  "theme": {
+    "--content": "1000px"
+  }
+}

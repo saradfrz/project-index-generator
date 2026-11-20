@@ -1,0 +1,226 @@
+{
+  "actions": {
+    "tag": "div",
+    "classes": [
+      "actions"
+    ]
+  },
+  "brand": {
+    "tag": "a",
+    "classes": [
+      "brand"
+    ]
+  },
+  "button": {
+    "tag": "a",
+    "classes": [
+      "button"
+    ]
+  },
+  "chapter-card": {
+    "tag": "article",
+    "classes": [
+      "chapter-card"
+    ]
+  },
+  "chapter-menu": {
+    "tag": "div",
+    "classes": [
+      "chapter-menu"
+    ]
+  },
+  "chapter-nav": {
+    "tag": "details",
+    "classes": [
+      "chapter-nav"
+    ]
+  },
+  "check": {
+    "tag": "div",
+    "classes": [
+      "check"
+    ]
+  },
+  "checks": {
+    "tag": "div",
+    "classes": [
+      "checks"
+    ]
+  },
+  "design-decisions": {
+    "tag": "div",
+    "classes": [
+      "design-decisions"
+    ]
+  },
+  "downloads": {
+    "tag": "div",
+    "classes": [
+      "downloads"
+    ]
+  },
+  "evidence-panel": {
+    "tag": "details",
+    "classes": [
+      "evidence-panel"
+    ]
+  },
+  "eyebrow": {
+    "tag": "div",
+    "classes": [
+      "eyebrow"
+    ]
+  },
+  "featured": {
+    "tag": "article",
+    "classes": [
+      "chapter-card",
+      "featured"
+    ]
+  },
+  "grid1": {
+    "tag": "div",
+    "classes": [
+      "grid1"
+    ]
+  },
+  "grid2": {
+    "tag": "div",
+    "classes": [
+      "grid2"
+    ]
+  },
+  "hero": {
+    "tag": "section",
+    "classes": [
+      "hero"
+    ]
+  },
+  "identity-separator": {
+    "tag": "span",
+    "classes": [
+      "identity-separator"
+    ]
+  },
+  "image-placeholder": {
+    "tag": "div",
+    "classes": [
+      "image-placeholder"
+    ]
+  },
+  "intro": {
+    "tag": "p",
+    "classes": [
+      "intro"
+    ]
+  },
+  "lead": {
+    "tag": "p",
+    "classes": [
+      "lead"
+    ]
+  },
+  "nav-wrap": {
+    "tag": "div",
+    "classes": [
+      "nav-wrap"
+    ]
+  },
+  "nebula": {
+    "tag": "div",
+    "classes": [
+      "nebula"
+    ]
+  },
+  "note": {
+    "tag": "div",
+    "classes": [
+      "note"
+    ]
+  },
+  "num": {
+    "tag": "div",
+    "classes": [
+      "num"
+    ]
+  },
+  "pill": {
+    "tag": "span",
+    "classes": [
+      "pill"
+    ]
+  },
+  "portfolio-cover": {
+    "tag": "div",
+    "classes": [
+      "portfolio-cover"
+    ]
+  },
+  "portfolio-identity": {
+    "tag": "div",
+    "classes": [
+      "portfolio-identity"
+    ]
+  },
+  "primary": {
+    "tag": "a",
+    "classes": [
+      "button",
+      "primary"
+    ]
+  },
+  "section": {
+    "tag": "section",
+    "classes": [
+      "section"
+    ]
+  },
+  "site-header": {
+    "tag": "header",
+    "classes": [
+      "site-header"
+    ]
+  },
+  "skip": {
+    "tag": "a",
+    "classes": [
+      "skip"
+    ]
+  },
+  "snapshot": {
+    "tag": "div",
+    "classes": [
+      "snapshot"
+    ]
+  },
+  "split": {
+    "tag": "div",
+    "classes": [
+      "split"
+    ]
+  },
+  "stat": {
+    "tag": "div",
+    "classes": [
+      "stat"
+    ]
+  },
+  "stats": {
+    "tag": "div",
+    "classes": [
+      "stats"
+    ]
+  },
+  "table-scroll": {
+    "tag": "div",
+    "classes": [
+      "table-scroll"
+    ]
+  },
+  "wrap": {
+    "tag": "div",
+    "classes": [
+      "wrap"
+    ]
+  }
+}

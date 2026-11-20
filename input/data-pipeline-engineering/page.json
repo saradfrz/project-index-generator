@@ -1,0 +1,1870 @@
+[
+  {
+    "tag": "div",
+    "classes": [
+      "nebula"
+    ],
+    "attrs": {
+      "aria-hidden": "true"
+    }
+  },
+  {
+    "tag": "a",
+    "text": "Skip to article",
+    "classes": [
+      "skip"
+    ],
+    "attrs": {
+      "href": "#main"
+    }
+  },
+  {
+    "tag": "header",
+    "children": [
+      {
+        "tag": "div",
+        "children": [
+          {
+            "tag": "a",
+            "text": "SF / DATA ENGINEERING",
+            "classes": [
+              "brand"
+            ],
+            "attrs": {
+              "href": "#top"
+            }
+          },
+          {
+            "tag": "nav",
+            "children": [
+                            {
+                "tag": "a",
+                "text": "Portfolio",
+                "attrs": {
+                  "href": "https://saradfrz.github.io/portfolio/"
+                }
+              },
+              {
+                "tag": "details",
+                "children": [
+                  {
+                    "tag": "summary",
+                    "text": "Contents"
+                  },
+                  {
+                    "tag": "div",
+                    "children": [
+                      {
+                        "tag": "a",
+                        "text": "1. Business discovery and requirements",
+                        "attrs": {
+                          "href": "#business-discovery-and-requirements"
+                        }
+                      },
+                      {
+                        "tag": "a",
+                        "text": "2. The engineering decisions",
+                        "attrs": {
+                          "href": "#the-engineering-decisions"
+                        }
+                      },
+                      {
+                        "tag": "a",
+                        "text": "3. Implementation",
+                        "attrs": {
+                          "href": "#implementation"
+                        }
+                      }
+                    ],
+                    "classes": [
+                      "chapter-menu"
+                    ]
+                  }
+                ],
+                "classes": [
+                  "chapter-nav"
+                ]
+              }
+            ],
+            "attrs": {
+              "aria-label": "Main navigation"
+            }
+          }
+        ],
+        "classes": [
+          "wrap",
+          "nav-wrap"
+        ]
+      }
+    ],
+    "classes": [
+      "site-header"
+    ]
+  },
+  {
+    "tag": "main",
+    "children": [
+      {
+        "tag": "div",
+        "children": [
+          {
+            "tag": "img",
+            "attrs": {
+              "src": "https://lmwxqzustlrpfmbhvjbx.supabase.co/storage/v1/object/public/portfolio/img/nebulae-02.png",
+              "alt": "",
+              "fetchpriority": "high"
+            }
+          }
+        ],
+        "classes": [
+          "portfolio-cover"
+        ],
+        "attrs": {
+          "aria-hidden": "true"
+        }
+      },
+      {
+        "tag": "div",
+        "children": [
+          {
+            "tag": "a",
+            "text": "Sara Fernandez",
+            "attrs": {
+              "href": "https://saradfrz.github.io/portfolio/"
+            }
+          },
+          {
+            "tag": "span",
+            "text": "■",
+            "attrs": {
+              "aria-hidden": "true",
+              "class": "identity-separator"
+            }
+          },
+          {
+            "tag": "span",
+            "text": "Senior Data Engineer"
+          }
+        ],
+        "classes": [
+          "portfolio-identity",
+          "wrap"
+        ]
+      },
+      {
+        "tag": "section",
+        "children": [
+          {
+            "tag": "p",
+            "text": "DATA ENGINEERING / FROM DISCOVERY TO OPERATIONS",
+            "classes": [
+              "eyebrow"
+            ]
+          },
+          {
+            "tag": "h1",
+            "text": "From Business Requirements to Production: Engineering a Data Pipeline",
+            "attrs": {
+              "style": "font-size: clamp(2.1rem, 5vw, 3.8rem); line-height: 1.12; max-width: 24ch"
+            }
+          },
+          {
+            "tag": "p",
+            "text": "Sara Fernandez · Senior Data Engineer · 19 min read",
+            "classes": [
+              "snapshot"
+            ]
+          },
+          {
+            "tag": "div",
+            "children": [
+              {
+                "tag": "a",
+                "text": "Start reading ↓",
+                "classes": [
+                  "button",
+                  "primary"
+                ],
+                "attrs": {
+                  "href": "#introduction"
+                }
+              },
+              {
+                "tag": "a",
+                "text": "Browse the contents",
+                "classes": [
+                  "button"
+                ],
+                "attrs": {
+                  "href": "#contents"
+                }
+              }
+            ],
+            "classes": [
+              "actions"
+            ]
+          }
+        ],
+        "classes": [
+          "hero",
+          "wrap"
+        ]
+      },
+      {
+        "tag": "section",
+        "children": [
+          {
+            "tag": "div",
+            "children": [
+              {
+                "tag": "p",
+                "children": [
+                  "You got the job, and your first assignment is to build an ETL pipeline. Before writing the first line of code, however, you need to understand the business problem, the source systems, and the data product you are expected to deliver. A well-designed pipeline is the result of a series of business and engineering decisions, not simply a sequence of extraction and transformation scripts."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "This article walks through the process of designing, implementing, and operating a data pipeline, from the initial conversation with business stakeholders to a reliable production release. Although the examples focus on analytical pipelines and the medallion architecture, the same principles apply to other data architectures."
+                ]
+              }
+            ],
+            "classes": [
+              "chapter-card"
+            ]
+          }
+        ],
+        "classes": [
+          "section",
+          "wrap"
+        ],
+        "attrs": {
+          "id": "introduction",
+          "aria-label": "Introduction",
+          "style": "padding-top: 40px"
+        }
+      },
+      {
+        "tag": "section",
+        "children": [
+          {
+            "tag": "h2",
+            "text": "In this article",
+            "attrs": {
+              "id": "contents-title"
+            }
+          },
+          {
+            "tag": "div",
+            "children": [
+              {
+                "tag": "div",
+                "children": [
+                  {
+                    "tag": "div",
+                    "children": [
+                      {
+                        "tag": "h3",
+                        "children": [
+                          {
+                            "tag": "a",
+                            "text": "Business discovery and requirements",
+                            "attrs": {
+                              "href": "#business-discovery-and-requirements"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "ul",
+                        "children": [
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Define the goal",
+                                "attrs": {
+                                  "href": "#define-the-goal"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "The source system",
+                                "attrs": {
+                                  "href": "#the-source-system"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "The source data",
+                                "attrs": {
+                                  "href": "#the-source-data"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Reverse engineer the source data modeling",
+                                "attrs": {
+                                  "href": "#reverse-engineer-the-source-data-modeling"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "The transformation",
+                                "attrs": {
+                                  "href": "#the-transformation"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Data governance",
+                                "attrs": {
+                                  "href": "#data-governance"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Data catalog",
+                                "attrs": {
+                                  "href": "#data-catalog"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Data lifecycle management",
+                                "attrs": {
+                                  "href": "#data-lifecycle-management"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "classes": [
+                      "check"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "children": [
+                      {
+                        "tag": "h3",
+                        "children": [
+                          {
+                            "tag": "a",
+                            "text": "The engineering decisions",
+                            "attrs": {
+                              "href": "#the-engineering-decisions"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "ul",
+                        "children": [
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Historical and incremental processing",
+                                "attrs": {
+                                  "href": "#historical-and-incremental-processing"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Pipeline state and execution control",
+                                "attrs": {
+                                  "href": "#pipeline-state-and-execution-control"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Data correction and recovery",
+                                "attrs": {
+                                  "href": "#data-correction-and-recovery"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Storage and performance optimization",
+                                "attrs": {
+                                  "href": "#storage-and-performance-optimization"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "classes": [
+                      "check"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "children": [
+                      {
+                        "tag": "h3",
+                        "children": [
+                          {
+                            "tag": "a",
+                            "text": "Implementation",
+                            "attrs": {
+                              "href": "#implementation"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "ul",
+                        "children": [
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Ingestion, transformations, orchestration, and configuration management",
+                                "attrs": {
+                                  "href": "#ingestion-transformations-orchestration-and-configuration-management"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Testing & Data Quality",
+                                "attrs": {
+                                  "href": "#testing-data-quality"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Deployment",
+                                "attrs": {
+                                  "href": "#deployment"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Production Operations",
+                                "attrs": {
+                                  "href": "#production-operations"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "li",
+                            "children": [
+                              {
+                                "tag": "a",
+                                "text": "Business Validation",
+                                "attrs": {
+                                  "href": "#business-validation"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "classes": [
+                      "check"
+                    ]
+                  }
+                ],
+                "classes": [
+                  "checks"
+                ]
+              }
+            ],
+            "classes": [
+              "chapter-card"
+            ]
+          }
+        ],
+        "classes": [
+          "section",
+          "wrap"
+        ],
+        "attrs": {
+          "id": "contents",
+          "aria-labelledby": "contents-title"
+        }
+      },
+      {
+        "tag": "section",
+        "children": [
+          {
+            "tag": "div",
+            "text": "01 / 03",
+            "classes": [
+              "num"
+            ]
+          },
+          {
+            "tag": "h2",
+            "text": "Business discovery and requirements",
+            "attrs": {
+              "id": "heading-business-discovery-and-requirements"
+            }
+          },
+          {
+            "tag": "div",
+            "children": [
+              {
+                "tag": "p",
+                "children": [
+                  "The first step is to schedule a kick-off session with business stakeholders, source-system owners, and the people who will consume the data. The objective is to establish the scope, identify constraints, and agree on what a successful delivery looks like. This phase should produce documented requirements that can be translated into technical acceptance criteria."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Define the goal"
+                ],
+                "attrs": {
+                  "id": "define-the-goal",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Start with the business outcome. What questions should the data product answer? Who will use it, and how will they consume it: through a dashboard in a reporting tool, a downstream application, another data pipeline, or a CSV file to be manipulated in Excel?"
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Define the expected datasets, measures, dimensions, and level of detail. If the finance team asks for an ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "accounts receivable aging mart"
+                    ]
+                  },
+                  ", establish whether they need one row per invoice, per installment, or per customer at each reporting date. For example, if an invoice has two installments with different due dates, installment-level detail lets the team assign each outstanding amount to the correct aging bucket. Agree on how to calculate ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "outstanding balance"
+                    ]
+                  },
+                  " and ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "overdue balance"
+                    ]
+                  },
+                  " as of the reporting date, including how to apply partial payments and credit notes, when an installment becomes overdue, and which exchange rate to use for foreign-currency balances. Confirm which dimensions the team needs for reporting, such as customer, legal entity, and transaction currency."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "The output is the ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "serving layer"
+                    ]
+                  },
+                  " of the data architecture. In a medallion architecture, this commonly corresponds to Gold, where business-ready data products are exposed to consumers. Gold may contain dimensional models, aggregates, or domain-specific marts; it does not have to contain only aggregated data. Define the expected schema, grain, freshness, and acceptance criteria before selecting the implementation."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "The source system"
+                ],
+                "attrs": {
+                  "id": "the-source-system",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Identify the source of the data and the records the pipeline needs. The source may be an ERP, a CRM, a transactional database, a SaaS application, an event stream, or a manually maintained spreadsheet. If an API or file export provides the data, identify the system that produces the underlying records. Confirm with the data owner what each record represents and which fields are required."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Document where the pipeline will read the data. For a database, record the host, database name, schema, and relevant tables or views. For an API, record the base URL and endpoints. For an event stream, identify the broker and topic. For files, specify the bucket and prefix, the full path to a shared intranet folder, or the SFTP host and directory. Verify that the pipeline can reach the location from its execution environment."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Determine how the pipeline will extract the data and detect changes. Check whether an existing connector meets the requirements for freshness, source-system load, and tracking updates and deletions. For an API, request the documentation and authentication requirements, then review pagination, rate limits, retry behavior, and historical coverage. For a database, evaluate JDBC or ODBC queries, the availability of a read replica, and support for change data capture (CDC). Confirm which service identity the pipeline will use, what it can read, and how the connection is encrypted."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+  "For file ingestion, agree with the provider on the file format, naming convention, delivery schedule, and landing zone where incoming files are received. Specify whether each delivery contains a full snapshot or only changes. For manual spreadsheet exports, identify the person responsible and provide a template with the expected worksheet name, columns, and data types. Define how the pipeline will validate each delivery and handle missing, duplicate, or corrected files."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "The source data"
+                ],
+                "attrs": {
+                  "id": "the-source-data",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Identify the tables, files, API resources, or event topics that must be consumed. Conduct ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "data profiling"
+                    ]
+                  },
+                  " to understand row counts, data types, null rates, distinct values, duplicate keys, value distributions, date ranges, and anomalous records."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Estimate both historical volume and the expected daily or hourly change volume, including inserts, updates, and deletes. Record average and peak throughput, file sizes, growth rates, and the size of the initial extraction. A billion-row source table with a small daily delta presents a very different design problem from a source that changes millions of records every hour."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Also establish the availability of primary keys, modification timestamps, sequence numbers, and CDC metadata. These determine whether reliable incremental extraction is feasible. Document source retention, historical coverage, schema-change behavior, and extraction constraints. Where timestamps are used, distinguish business event time from the time a record is created, modified, or ingested."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Reverse engineer the source data modeling"
+                ],
+                "attrs": {
+                  "id": "reverse-engineer-the-source-data-modeling",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "When the source is the backend of an ERP or CRM, understanding the physical schema is not enough. You also need to understand how the application creates and changes data as business processes occur."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Reverse engineer the source data model using an entity-relationship diagram (ERD), data dictionary, and process-flow diagram. A tool such as draw.io can document tables, cardinalities, primary keys, foreign keys, and the relationships between entities. Distinguish declared database constraints from relationships that are merely enforced by application logic."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "For example, follow the lifecycle of a purchase order: creation, line-item registration, approval, partial receipt, invoice matching, cancellation, and closure. Identify which tables are inserted into or updated at each step, whether status history is retained, and how corrections are represented."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Validate your understanding with representative transactions and source-system developers. A field that looks like a deletion flag might represent cancellation rather than a physical database delete. An order status might describe the header but not the state of each item. These distinctions are critical when building a trustworthy analytical model."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "The transformation"
+                ],
+                "attrs": {
+                  "id": "the-transformation",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Once the source model is understood, work with stakeholders to translate their business requirements into target datasets. This is the ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "source-to-target mapping"
+                    ]
+                  },
+                  " phase. Document how each target field is derived, including source columns, join conditions, filters, type conversions, calculations, reference data, and business rules."
+                ]
+              },
+              {
+                "tag": "ul",
+                "children": [
+                  {
+                    "tag": "li",
+                    "children": [
+                      "Prototype the transformations and joins in SQL or an equivalent processing framework. Use representative source records to validate the mapping before implementing the production pipeline."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      "For every input and output table, establish its grain, candidate keys, primary and foreign keys, and join cardinality (one-to-one, one-to-many, or many-to-many). Check for join fan-out, which can inflate aggregates when records are unintentionally multiplied."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      "Profile duplicate keys, orphaned records, nulls, and unexpected status values. Distinguish genuine duplicates from valid repeated business events, such as multiple deliveries against a single purchase-order line."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      "Investigate unusual application behavior with the system owners. Form hypotheses and test them against actual records. Do not assume that a business user understands the underlying database model or that a column name accurately describes its meaning."
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Design the target model according to its consumption pattern. For analytical use cases, a dimensional model with fact and dimension tables may be appropriate. Define fact-table grain, surrogate or business keys, conformed dimensions, and the handling of historical attribute changes (for example, slowly changing dimensions). For operational consumers, a different model may be more suitable."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "In a medallion architecture, Bronze typically preserves source fidelity and ingestion metadata; Silver performs cleansing, standardization, deduplication, and integration; Gold applies business semantics and presents consumption-ready datasets. Assign each transformation to the appropriate layer and document the lineage between them. The resulting design should include an agreed source-to-target mapping, target model, and business-rule specifications."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Data governance"
+                ],
+                "attrs": {
+                  "id": "data-governance",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Determine who is accountable for the data throughout its lifecycle. Identify the ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "data owner"
+                    ]
+                  },
+                  ", who is accountable for the domain and its permitted use; the ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "data steward"
+                    ]
+                  },
+                  ", who maintains definitions and quality expectations; the ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "source-system owner"
+                    ]
+                  },
+                  ", who is responsible for the application; and the data engineering team, which maintains the pipeline and its operational controls. Specific role boundaries vary by organization."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Agree on who enters or corrects source data, who approves business rules, and who investigates source-data incidents. If invalid data causes a pipeline failure, the data team must detect and manage the incident, but the source owner may be responsible for correcting the underlying business record or application defect."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Governance also covers data classification, access control, least-privilege permissions, sensitive-data handling, masking, encryption, auditability, lineage, and retention obligations. Ensure the pipeline does not expose personally identifiable information or restricted financial data beyond the approved scope."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Establish an escalation path and a clear ownership model for quality failures, schema changes, and changes to business definitions. These agreements prevent technical workarounds from becoming undocumented business policies."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Data catalog"
+                ],
+                "attrs": {
+                  "id": "data-catalog",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "For each source and platform dataset, maintain technical and business metadata in a ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "data catalog"
+                    ]
+                  },
+                  ". At minimum, document:"
+                ]
+              },
+              {
+                "tag": "ul",
+                "children": [
+                  {
+                    "tag": "li",
+                    "children": [
+                      "Dataset name, purpose, location, owner, and intended consumers."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      "Column names, data types, nullability, descriptions, and units of measure."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      "Dataset grain, business keys, constraints, relationships, and relevant quality rules."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      "Source-to-target lineage, refresh cadence, classification, and retention policy."
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "The catalog makes it easier to investigate incidents and identify affected downstream consumers. When source data is duplicated or malformed, use the documented expectations and actual profiling results to decide whether the application must be corrected or whether a controlled transformation can address the issue. For example, standardizing a known formatting inconsistency in Silver may be acceptable; silently inventing a missing purchase-order amount is not."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "For manually delivered files, enforce the agreed schema before admitting data into the processing pipeline. Validate mandatory columns, names, types, date formats, and required fields. Reject or quarantine invalid files and return actionable error messages to the file owner. Keep the original submission for investigation or replay, subject to retention requirements."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "A data catalog documents and makes datasets discoverable. A ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "data contract"
+                    ]
+                  },
+                  ", by contrast, defines agreed expectations between a data producer and its consumers: schema, semantics, quality, freshness, compatibility, ownership, and change notification. A source contract governs what the upstream producer supplies; a serving-layer contract governs what the pipeline promises to its consumers. The catalog can reference these contracts, but documentation alone does not enforce them."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Data lifecycle management"
+                ],
+                "attrs": {
+                  "id": "data-lifecycle-management",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "Data freshness."
+                    ]
+                  },
+                  " Determine how quickly source changes must be reflected in the serving layer. Is a daily or weekly batch sufficient, or does the business require near-real-time (NRT) or streaming updates? Translate the requirement into a measurable service-level objective (SLO), such as completing the previous day's data by 07:00 or making 99% of events available within five minutes. Distinguish freshness from end-to-end latency and processing duration."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Freshness requirements influence scheduling, orchestration, and the choice between batch, micro-batch, and streaming architectures. Higher freshness can increase compute, connectivity, and operational costs, but the actual trade-off depends on workload and platform pricing. Choose the least complex architecture that satisfies the agreed SLO."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "Historical data."
+                    ]
+                  },
+                  " Establish how much history the business needs and whether older data must remain queryable, be archived, or be deleted. Separate the retention requirements of raw data, curated datasets, operational metadata, and backups. Consider the history needed for financial reporting, audit, trend analysis, and future backfills. A 200-day moving average, for example, needs preceding observations even when only recent results are displayed."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "The main lifecycle management mechanisms are:"
+                ]
+              },
+              {
+                "tag": "ul",
+                "children": [
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Data retention:"
+                        ]
+                      },
+                      " the period for which data must be kept and, where required, remain accessible."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Data pruning:"
+                        ]
+                      },
+                      " removal of data outside the required scope, often by deleting obsolete rows or partitions under a retention policy."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Data archival:"
+                        ]
+                      },
+                      " moving infrequently accessed data to lower-cost storage while preserving retrieval and restoration options."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Data expiration (TTL):"
+                        ]
+                      },
+                      " automatic expiry based on a predefined time-to-live policy, where the storage engine supports it."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Data purging:"
+                        ]
+                      },
+                      " irreversible removal under an approved policy, including applicable copies, backups, or recoverable versions where required and technically feasible."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Hot, warm, and cold storage:"
+                        ]
+                      },
+                      " storage tiers based on access frequency, retrieval latency, and cost."
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "A logical delete is not necessarily a physical purge, and deleting old data in one layer does not automatically remove it from downstream tables or backups. Coordinate retention across the architecture and verify legal, audit, privacy, and recovery requirements before enabling automated cleanup."
+                ]
+              }
+            ],
+            "classes": [
+              "chapter-card"
+            ]
+          }
+        ],
+        "classes": [
+          "section",
+          "wrap"
+        ],
+        "attrs": {
+          "id": "business-discovery-and-requirements",
+          "aria-labelledby": "heading-business-discovery-and-requirements"
+        }
+      },
+      {
+        "tag": "section",
+        "children": [
+          {
+            "tag": "div",
+            "text": "02 / 03",
+            "classes": [
+              "num"
+            ]
+          },
+          {
+            "tag": "h2",
+            "text": "The engineering decisions",
+            "attrs": {
+              "id": "heading-the-engineering-decisions"
+            }
+          },
+          {
+            "tag": "div",
+            "children": [
+              {
+                "tag": "p",
+                "children": [
+                  "With the business requirements, source model, contracts, and lifecycle expectations established, translate them into an architecture. Document the important trade-offs in architecture decision records (ADRs): the selected ingestion method, processing model, data storage format, orchestration tool, and recovery strategy. Define functional and non-functional requirements, including performance, reliability, scalability, security, cost, and maintainability."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Historical and incremental processing"
+                ],
+                "attrs": {
+                  "id": "historical-and-incremental-processing",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Define separate strategies for building the initial state and keeping it up to date. Establish the source extraction boundary, how progress is recorded, how updates and deletes are detected, and how the target is written. A common pattern is an initial snapshot followed by incremental ingestion, but a consistent transition from snapshot to CDC is necessary to avoid missing changes or applying them incorrectly."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "The key processing patterns are:"
+                ]
+              },
+              {
+                "tag": "ul",
+                "children": [
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Initial load:"
+                        ]
+                      },
+                      " the first population of a target dataset, usually from an available historical snapshot or a bounded extraction."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Full refresh:"
+                        ]
+                      },
+                      " rebuilding a target from all source data within its defined scope. This is simple for small datasets but can be expensive for large ones."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Incremental load:"
+                        ]
+                      },
+                      " processing only data that is new or has changed since the last successfully committed execution. This can use timestamps, CDC positions, or another reliable change-tracking mechanism."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Delta processing:"
+                        ]
+                      },
+                      " applying changes rather than recomputing the entire dataset; it may use inserts, updates, deletes, or recalculated aggregates."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Backfill:"
+                        ]
+                      },
+                      " processing a historical interval to populate a new dataset, recover missing periods, or apply revised logic to historical data."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Reprocessing:"
+                        ]
+                      },
+                      " running processing logic again over previously processed data, often to correct defects or apply a transformation change."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Historical replay:"
+                        ]
+                      },
+                      " consuming retained historical events again, typically in a controlled order, to reconstruct state or regenerate derived outputs."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Catch-up processing:"
+                        ]
+                      },
+                      " processing accumulated changes after an interruption or lag so the pipeline returns to its freshness target."
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Choose target-write semantics based on the data model: append for immutable events, upsert or MERGE for mutable keyed records, and partition overwrite or targeted replacement for recomputed time ranges. A merge alone does not guarantee correctness: validate source-key uniqueness, event ordering, and handling of deletes."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "For incremental loads, use bounded extraction intervals and advance the committed progress marker only after the required target writes succeed. Validate counts, uniqueness, source-to-target reconciliation, and processing completeness. Backfills should use explicit start and end boundaries and must not inadvertently advance the production checkpoint or conflict with concurrent incremental writes. If a transformation depends on earlier periods, extend the input range to cover those dependencies."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Pipeline state and execution control"
+                ],
+                "attrs": {
+                  "id": "pipeline-state-and-execution-control",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "A production pipeline needs durable state. It must know which input has been processed, which output has been committed, and how to recover safely if execution stops midway."
+                ]
+              },
+              {
+                "tag": "ul",
+                "children": [
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Watermarking:"
+                        ]
+                      },
+                      " in batch ingestion, a high-water mark can track extraction progress (for example, a source modification timestamp plus a tie-breaking key). In event-time streaming, a watermark is a threshold used to manage late data and bound state; it is not necessarily a source-consumption cursor."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Checkpointing:"
+                        ]
+                      },
+                      " persisting execution progress and, where applicable, streaming state to enable recovery. Checkpoints must be durable and compatible with the query or job that created them."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Offset management:"
+                        ]
+                      },
+                      " tracking the consumption position of records in an ordered source, such as a Kafka topic partition or CDC log."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Idempotency:"
+                        ]
+                      },
+                      " ensuring that retries or repeated processing of the same logical input produce the intended target state without duplicate or unintended side effects."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Deduplication:"
+                        ]
+                      },
+                      " identifying and removing duplicate records using a defined key and a deterministic rule for selecting the surviving version."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Lookback window:"
+                        ]
+                      },
+                      " re-extracting or reprocessing a recent interval to capture late-arriving records or corrections, with idempotent writes to prevent duplicates."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Change data capture (CDC):"
+                        ]
+                      },
+                      " capturing source inserts, updates, and deletes, usually from database logs or another change-tracking mechanism, and delivering them with metadata that supports downstream application."
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Define a stable record identity and a deterministic ordering rule. In CDC, a source sequence or commit position is often more reliable for change ordering than a business timestamp. In a distributed stream, ordering guarantees may apply only within individual partitions."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Design the pipeline around its delivery guarantees. At-least-once delivery can cause retries and duplicate events. Exactly-once processing or effects require coordination between source progress, processing state, and sink commits, or a suitably idempotent sink. A checkpoint does not make arbitrary external side effects exactly-once. Test what happens if the target write succeeds but the job fails before recording progress."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Data correction and recovery"
+                ],
+                "attrs": {
+                  "id": "data-correction-and-recovery",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Even a well-designed pipeline must accommodate late data, invalid inputs, changing schemas, and failures. Recovery is part of the architecture, not an afterthought."
+                ]
+              },
+              {
+                "tag": "ul",
+                "children": [
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Late-arriving data:"
+                        ]
+                      },
+                      " records received after their expected processing period. Define the acceptable delay, event-time handling, and treatment of records beyond that threshold."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Data reconciliation:"
+                        ]
+                      },
+                      " verifying source-to-target consistency using appropriate controls, such as counts, distinct keys, sums, checksums, or transaction-level comparisons within the same scope."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Selective reprocessing:"
+                        ]
+                      },
+                      " rebuilding affected records, partitions, or date ranges without recomputing unrelated data."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Delete propagation:"
+                        ]
+                      },
+                      " applying source deletions downstream when required by business semantics, contracts, or privacy policies. Distinguish physical deletes, soft deletes, and business cancellations."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Schema evolution:"
+                        ]
+                      },
+                      " managing compatible and breaking structural changes through validation, versioning, migration, and consumer coordination."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Failure recovery:"
+                        ]
+                      },
+                      " restoring normal processing after a job, dependency, infrastructure, or data-quality failure using retries, checkpoints, controlled replays, or rollback."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Disaster recovery:"
+                        ]
+                      },
+                      " restoring data and infrastructure after a major loss, based on recovery time objectives (RTO), recovery point objectives (RPO), backups, and tested restoration procedures."
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "For example, if a record is physically deleted in Bronze and a downstream stream reads only inserts and updates, the Silver copy may remain. A pipeline that must mirror source state needs to consume the delete event and apply the correct target operation. If the deletion instead reflects a business cancellation that must remain in reporting, preserve the record and update its business status. The correct behavior depends on the contract, not simply on the existence of a delete flag."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Define error-handling policies: transient failures may be retried with backoff; malformed records may be quarantined with sufficient context; systemic data-quality failures may require stopping publication. Preserve lineage and error metadata so operators can investigate and replay affected inputs. Recovery procedures must include reconciliation before the corrected dataset is made available again."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Storage and performance optimization"
+                ],
+                "attrs": {
+                  "id": "storage-and-performance-optimization",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Choose a physical data layout that matches the workload, the storage engine, and the expected access patterns. Avoid premature optimization: establish a performance baseline and measure the effect of changes against representative volumes."
+                ]
+              },
+              {
+                "tag": "ul",
+                "children": [
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Partitioning:"
+                        ]
+                      },
+                      " organizing data into segments, often by a low- or moderate-cardinality column such as date, to improve maintenance and enable efficient filtering. Excessive partitioning can create small files or administrative overhead."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Partition pruning:"
+                        ]
+                      },
+                      " eliminating irrelevant partitions during query execution based on filters. Unlike retention-related data pruning, it does not delete data."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Compaction:"
+                        ]
+                      },
+                      " consolidating small files into larger files to reduce metadata overhead and improve scan efficiency in file-based storage systems."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Vacuuming:"
+                        ]
+                      },
+                      " engine-specific maintenance. In a lakehouse, it may remove obsolete files beyond a retention threshold; in PostgreSQL, VACUUM generally makes dead-tuple space reusable and supports database maintenance. These operations are not interchangeable."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Data clustering:"
+                        ]
+                      },
+                      " colocating or organizing related values to improve data skipping and filtered reads, depending on the storage engine."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "Materialization:"
+                        ]
+                      },
+                      " persisting computed results, such as tables, materialized views, or precomputed aggregates, to reduce repeated computation at the expense of storage and refresh work."
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Also evaluate file formats and compression, statistics, indexes in relational systems, join strategies, predicate and projection pushdown, skew, shuffle volume, and parallelism. In distributed processing, a poorly chosen join or partitioning strategy may dominate compute cost. For streaming, consider state-store size, trigger interval, input rate, and backpressure."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Measure end-to-end runtime, data scanned, compute consumption, storage growth, and cost per successful run or unit of data. Tune against actual requirements and consider the cost of maintenance, retention, and backfills, not only the fastest possible query."
+                ]
+              }
+            ],
+            "classes": [
+              "chapter-card"
+            ]
+          }
+        ],
+        "classes": [
+          "section",
+          "wrap"
+        ],
+        "attrs": {
+          "id": "the-engineering-decisions",
+          "aria-labelledby": "heading-the-engineering-decisions"
+        }
+      },
+      {
+        "tag": "section",
+        "children": [
+          {
+            "tag": "div",
+            "text": "03 / 03",
+            "classes": [
+              "num"
+            ]
+          },
+          {
+            "tag": "h2",
+            "text": "Implementation",
+            "attrs": {
+              "id": "heading-implementation"
+            }
+          },
+          {
+            "tag": "div",
+            "children": [
+              {
+                "tag": "p",
+                "children": [
+                  "At this point, the pipeline can be built against an agreed design. Implementation should be incremental: deliver a small end-to-end slice first, validate it, then expand to the remaining datasets and volumes. Keep the pipeline version-controlled and reproducible."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Ingestion, transformations, orchestration, and configuration management"
+                ],
+                "attrs": {
+                  "id": "ingestion-transformations-orchestration-and-configuration-management",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Implement ingestion with the selected connector and extraction strategy. Preserve raw payloads or source-equivalent records where appropriate, alongside metadata such as source identifier, ingestion timestamp, file name, batch or run ID, and change sequence. Implement pagination, retry policies, timeouts, schema validation, and safe handling of partial deliveries. Avoid hard-coded secrets and ensure failed or incomplete extraction is detectable."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Implement transformation logic in modular, testable components using SQL, dbt, Spark, or another suitable framework. Apply the agreed source-to-target mappings and separate technical standardization from business semantics. For a medallion design, use Bronze, Silver, and Gold as explicit responsibilities rather than merely naming three sets of tables."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Build orchestration as a directed acyclic graph (DAG) or an appropriate event-driven workflow. Define dependencies, triggers or schedules, retry policies, timeouts, failure notifications, concurrency limits, and rerun behavior. A quality gate should prevent dependent datasets from being published when critical validation fails. Where multiple tables form one data product, define a consistent publication strategy so consumers do not read partially refreshed results."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Keep configuration separate from code: source endpoints, catalog and schema names, date ranges, feature flags, and environment-specific parameters should be configurable. Implement distinct execution modes for initial loads, production deltas, and backfills where needed. Record run parameters, code version, input boundaries, and output metrics for reproducibility."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Testing & Data Quality"
+                ],
+                "attrs": {
+                  "id": "testing-data-quality",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "A pipeline is not complete because it runs successfully. It must produce correct, consistent data and behave predictably under failure conditions."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Use ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "unit tests"
+                    ]
+                  },
+                  " for isolated transformation rules and ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "integration tests"
+                    ]
+                  },
+                  " for interactions between sources, processing components, and targets. Include representative business cases: partial deliveries, cancelled orders, duplicate messages, null values, multi-currency transactions, and historical corrections. Validate schema compatibility, uniqueness, referential integrity, accepted values, and business invariants."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Implement source-to-target reconciliation at appropriate boundaries, such as row counts for lossless ingestion and monetary totals or distinct business keys for transformed data. A transformation that aggregates order lines will not have the same row count as its source; reconciliation must respect the intended grain and filtering rules."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Test incremental behavior, empty batches, late arrivals, deletes, retry safety, overlapping executions, and replay. Simulate interruptions between extraction, writes, and checkpoint updates. Perform load and performance tests using realistic volumes and measure whether the freshness SLO can be met within the cost budget."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Automate critical quality checks in CI/CD and production orchestration. Define severity levels: some anomalies warrant warnings, whereas others require quarantine or blocking publication. Establish who is notified and what remediation is expected. Persist quality results so trends and recurring source issues can be investigated."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Deployment"
+                ],
+                "attrs": {
+                  "id": "deployment",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Manage infrastructure and platform resources through ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "Infrastructure as Code (IaC)"
+                    ]
+                  },
+                  " where supported. Define compute, storage, network access, permissions, identities, and orchestration resources in version-controlled configurations. Maintain separate development, test, and production environments with appropriate isolation and access controls."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Use continuous integration and continuous delivery/deployment (CI/CD) to automate code validation, tests, packaging, and environment promotion. Store credentials in an approved secrets manager and inject them at runtime. Apply least-privilege service identities rather than personal credentials."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Plan production releases around schema compatibility, database migrations, checkpoint compatibility, and consumer impact. Define rollback procedures and, where a code rollback cannot undo a data change, a corrective reprocessing or restoration plan. For significant changes, consider shadow runs, parallel validation, or a controlled cutover before switching consumers to the new output."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "The release should include versioned code and configuration, infrastructure definitions, operational documentation, data contracts, monitoring configuration, and a deployment checklist. Obtain the appropriate technical and business approvals before enabling the production schedule."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Production Operations"
+                ],
+                "attrs": {
+                  "id": "production-operations",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Once the pipeline is live, the focus shifts from delivering code to maintaining a reliable data product. Establish ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "observability"
+                    ]
+                  },
+                  " across both system behavior and data behavior. Monitor execution status, duration, throughput, retries, backlog or lag, resource consumption, freshness, volume anomalies, schema changes, and quality failures. A successful job can still publish incorrect or stale data."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Use structured logs, metrics, and run identifiers to correlate failures with input data, execution parameters, and code versions. Define actionable alerts and route them to the responsible team. Maintain runbooks for common incidents, including how to diagnose failures, isolate affected datasets, restart safely, backfill missing intervals, and reconcile corrected outputs."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Track service-level indicators (SLIs) against the agreed SLOs and any formal service-level agreements (SLAs). Review cost and performance trends, retention compliance, dependency changes, and capacity requirements. Test restoration procedures periodically and document incidents, root causes, and preventive actions. Operational excellence also means revisiting architecture decisions when requirements or workload patterns change."
+                ]
+              },
+              {
+                "tag": "h3",
+                "children": [
+                  "Business Validation"
+                ],
+                "attrs": {
+                  "id": "business-validation",
+                  "style": "scroll-margin-top: 100px"
+                }
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Technical validation establishes that the pipeline behaves as designed. Business validation establishes that it solves the right problem. Although formal acceptance often happens before the production cutover, validation should begin during discovery and continue throughout implementation and production."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Conduct user acceptance testing (UAT) with business stakeholders using representative scenarios and agreed acceptance criteria. Compare results with authoritative source reports or independently calculated figures, and investigate differences in grain, filters, timestamps, currencies, or business definitions. Confirm that the data is available through the expected interface and meets the freshness and usability requirements."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Obtain explicit acceptance of the delivered data product, document limitations, and agree on ownership for future changes. After release, assess whether the pipeline delivers measurable value: reduced manual reporting effort, faster access to information, more reliable reconciliations, or better decision-making. These outcomes should guide continuous improvement."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "A successful data pipeline is more than a functioning ETL job. It is an operational data product with well-defined business semantics, clear ownership, reproducible engineering, measurable quality, and a sustainable cost profile. The engineering work begins with understanding the business and continues for as long as consumers depend on the data."
+                ]
+              }
+            ],
+            "classes": [
+              "chapter-card"
+            ]
+          }
+        ],
+        "classes": [
+          "section",
+          "wrap"
+        ],
+        "attrs": {
+          "id": "implementation",
+          "aria-labelledby": "heading-implementation"
+        }
+      }
+    ],
+    "attrs": {
+      "id": "main"
+    }
+  },
+  {
+    "tag": "footer",
+    "children": [
+      {
+        "tag": "div",
+        "children": [
+          {
+            "tag": "span",
+            "text": "Sara Fernandez · Senior Data Engineer"
+          },
+          {
+            "tag": "a",
+            "text": "Back to top ↑",
+            "attrs": {
+              "href": "#top"
+            }
+          }
+        ],
+        "classes": [
+          "wrap"
+        ]
+      }
+    ]
+  }
+]
