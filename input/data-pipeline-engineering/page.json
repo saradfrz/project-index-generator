@@ -283,7 +283,7 @@
                             "children": [
                               {
                                 "tag": "a",
-                                "text": "Define the goal",
+                                "text": "1.1 Define the goal",
                                 "attrs": {
                                   "href": "#define-the-goal"
                                 }
@@ -295,9 +295,9 @@
                             "children": [
                               {
                                 "tag": "a",
-                                "text": "The source system",
+                                "text": "Asses the source systems",
                                 "attrs": {
-                                  "href": "#the-source-system"
+                                  "href": "#asses-the-source-systems"
                                 }
                               }
                             ]
@@ -588,7 +588,7 @@
               {
                 "tag": "h3",
                 "children": [
-                  "Define the goal"
+                  "1.1 Define the goal"
                 ],
                 "attrs": {
                   "id": "define-the-goal",
@@ -604,75 +604,115 @@
               {
                 "tag": "p",
                 "children": [
-                  "Define the expected datasets, measures, dimensions, and level of detail. If the finance team asks for an ",
-                  {
-                    "tag": "strong",
-                    "children": [
-                      "accounts receivable aging mart"
-                    ]
-                  },
-                  ", establish whether they need one row per invoice, per installment, or per customer at each reporting date. For example, if an invoice has two installments with different due dates, installment-level detail lets the team assign each outstanding amount to the correct aging bucket. Agree on how to calculate ",
-                  {
-                    "tag": "strong",
-                    "children": [
-                      "outstanding balance"
-                    ]
-                  },
-                  " and ",
-                  {
-                    "tag": "strong",
-                    "children": [
-                      "overdue balance"
-                    ]
-                  },
-                  " as of the reporting date, including how to apply partial payments and credit notes, when an installment becomes overdue, and which exchange rate to use for foreign-currency balances. Confirm which dimensions the team needs for reporting, such as customer, legal entity, and transaction currency."
+                  "Ask stakeholders to walk you through the business process. What triggers it, who owns each step, and what marks it as complete? Follow a recent example to identify where decisions are made, what data people use today, and how they would use the data product to decide what happens next."
                 ]
               },
               {
                 "tag": "p",
                 "children": [
-                  "The output is the ",
-                  {
-                    "tag": "strong",
-                    "children": [
-                      "serving layer"
-                    ]
-                  },
-                  " of the data architecture. In a medallion architecture, this commonly corresponds to Gold, where business-ready data products are exposed to consumers. Gold may contain dimensional models, aggregates, or domain-specific marts; it does not have to contain only aggregated data. Define the expected schema, grain, freshness, and acceptance criteria before selecting the implementation."
+                  "Finally, estimate the financial impact of implementing the data product. How long does it take to extract and analyze the data? Where do errors occur, and what losses could the team avoid? Use the current process as a baseline, then compare the value of hours saved and expected losses avoided with the cost of building and running the data product to estimate ROI."
                 ]
               },
               {
                 "tag": "h3",
                 "children": [
-                  "The source system"
+                  "Assess the source systems"
                 ],
                 "attrs": {
-                  "id": "the-source-system",
+                  "id": "identify-the-source-system",
                   "style": "scroll-margin-top: 100px"
                 }
               },
+
               {
-                "tag": "p",
+                "tag": "h3",
                 "children": [
-                  "Identify the source of the data and the records the pipeline needs. The source may be an ERP, a CRM, a transactional database, a SaaS application, an event stream, or a manually maintained spreadsheet. If an API or file export provides the data, identify the system that produces the underlying records. Confirm with the data owner what each record represents and which fields are required."
+                  
+                  "Identify the source systems"
                 ]
               },
               {
                 "tag": "p",
                 "children": [
-                  "Document where the pipeline will read the data. For a database, record the host, database name, schema, and relevant tables or views. For an API, record the base URL and endpoints. For an event stream, identify the broker and topic. For files, specify the bucket and prefix, the full path to a shared intranet folder, or the SFTP host and directory. Verify that the pipeline can reach the location from its execution environment."
+                  "Identify the system that produces the records the pipeline needs. It may be a business application such as an ERP or CRM, a transactional database, an application or device that emits events, or a spreadsheet maintained by a business team. Confirm with the data owner what each record represents, which fields are required, and how to recognize a new record, an update, or a deletion."
                 ]
               },
               {
                 "tag": "p",
                 "children": [
-                  "Determine how the pipeline will extract the data and detect changes. Check whether an existing connector meets the requirements for freshness, source-system load, and tracking updates and deletions. For an API, request the documentation and authentication requirements, then review pagination, rate limits, retry behavior, and historical coverage. For a database, evaluate JDBC or ODBC queries, the availability of a read replica, and support for change data capture (CDC). Confirm which service identity the pipeline will use, what it can read, and how the connection is encrypted."
+                  "Document how the pipeline will access those records. Verify connectivity from the pipeline's execution environment, identify the service identity and its permissions, and confirm how the connection is encrypted. Check whether an existing connector can meet the freshness requirements and capture changes within the load the source system can support."
+                ]
+              },
+              {
+                "tag": "h4",
+                "children": [
+                  "Databases"
                 ]
               },
               {
                 "tag": "p",
                 "children": [
-  "For file ingestion, agree with the provider on the file format, naming convention, delivery schedule, and landing zone where incoming files are received. Specify whether each delivery contains a full snapshot or only changes. For manual spreadsheet exports, identify the person responsible and provide a template with the expected worksheet name, columns, and data types. Define how the pipeline will validate each delivery and handle missing, duplicate, or corrected files."
+                  "Record the host, database name, schema, and relevant tables or views. Identify the keys that uniquely identify each record. If the pipeline will query the database through JDBC or ODBC, determine whether it can read from a replica. Evaluate support for change data capture (CDC). If incremental extraction relies on a timestamp, confirm which operations update it and how the pipeline will detect deletions."
+                ]
+              },
+              {
+                "tag": "h4",
+                "children": [
+                  "APIs"
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Identify the application behind the API and the endpoints that expose the required records. Request the documentation and confirm the base URL, authentication requirements, pagination, rate limits, and retry behavior. Determine how much history the API exposes and whether it provides a reliable way to retrieve records changed or deleted since the previous run."
+                ]
+              },
+              {
+                "tag": "h4",
+                "children": [
+                  "Event streams"
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Identify the system that publishes the events, the broker and topic the pipeline will read, and what triggers each event. Confirm how to identify the affected record and interpret the event as a business action or a change in state. Document ordering guarantees, whether an event can be delivered more than once, and how far back the pipeline can replay events after an interruption."
+                ]
+              },
+              {
+                "tag": "h4",
+                "children": [
+                  "System-generated files"
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Identify the system that generates the files and agree with the provider on the format, naming convention, delivery schedule, and landing location. Record the bucket and prefix, shared folder path, or SFTP host and directory. Specify whether each delivery contains a full snapshot or only changes, how the pipeline will recognize a complete delivery, and how it will handle missing, duplicate, or corrected files."
+                ]
+              },
+              {
+                "tag": "h4",
+                "children": [
+                  "Manual exports"
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Identify the source application, the person responsible for the export, and the report or query they run. Document the filters and date range so the extraction is repeatable. Agree on the file format, naming convention, delivery schedule, and landing location. Confirm whether each file contains a full snapshot or only changes, and define how the pipeline will recognize a corrected export for a period it has already processed."
+                ]
+              },
+              {
+                "tag": "h4",
+                "children": [
+                  "Manually maintained spreadsheets"
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Identify who enters and updates the data and what each row represents. Document the workbook location, worksheet name, required columns, and expected data types. Clarify with the user whether to preserve the spreadsheet's history by appending every row from each delivery with a snapshot date, or to maintain the latest state by upserting rows using a predefined primary key. For upserts, agree on which column or combination of columns identifies the same record across edits. Confirm how contributors indicate deletions so the pipeline can apply them correctly."
                 ]
               },
               {
