@@ -791,19 +791,19 @@
                   "subsection-title"
                 ]
               },
-                            {
+              {
                 "tag": "p",
                 "children": [
                   "Identify the tables, files, API resources, or event topics that must be consumed. Conduct data profiling to understand row counts, data types, null rates, distinct values, duplicate keys, value distributions, date ranges, and anomalous records."
                 ]
               },
-                            {
+              {
                 "tag": "p",
                 "children": [
                   "Estimate both historical volume and the expected daily or hourly change volume, including inserts, updates, and deletes. Record average and peak throughput, file sizes, growth rates, and the size of the initial extraction. A billion-row source table with a small daily delta presents a very different design problem from a source that changes millions of records every hour."
                 ]
               },
-                            {
+              {
                 "tag": "p",
                 "children": [
                   "Also establish the availability of primary keys, modification timestamps, sequence numbers, and CDC metadata. These determine whether reliable incremental extraction is feasible. Document source retention, historical coverage, schema-change behavior, and extraction constraints. Where timestamps are used, distinguish business event time from the time a record is created, modified, or ingested."
@@ -844,73 +844,6 @@
                 "tag": "p",
                 "children": [
                   "Validate your understanding with representative transactions and source-system developers. A field that looks like a deletion flag might represent cancellation rather than a physical database delete. An order status might describe the header but not the state of each item. These distinctions are critical when building a trustworthy analytical model."
-                ]
-              },
-              {
-                "tag": "h3",
-                "children": [
-                  "The transformation"
-                ],
-                "attrs": {
-                  "id": "the-transformation",
-                  "style": "scroll-margin-top: 100px"
-                },
-                "classes": [
-                  "subsection-title"
-                ]
-              },
-              {
-                "tag": "p",
-                "children": [
-                  "Once the source model is understood, work with stakeholders to translate their business requirements into target datasets. This is the ",
-                  {
-                    "tag": "strong",
-                    "children": [
-                      "source-to-target mapping"
-                    ]
-                  },
-                  " phase. Document how each target field is derived, including source columns, join conditions, filters, type conversions, calculations, reference data, and business rules."
-                ]
-              },
-              {
-                "tag": "ul",
-                "children": [
-                  {
-                    "tag": "li",
-                    "children": [
-                      "Prototype the transformations and joins in SQL or an equivalent processing framework. Use representative source records to validate the mapping before implementing the production pipeline."
-                    ]
-                  },
-                  {
-                    "tag": "li",
-                    "children": [
-                      "For every input and output table, establish its grain, candidate keys, primary and foreign keys, and join cardinality (one-to-one, one-to-many, or many-to-many). Check for join fan-out, which can inflate aggregates when records are unintentionally multiplied."
-                    ]
-                  },
-                  {
-                    "tag": "li",
-                    "children": [
-                      "Profile duplicate keys, orphaned records, nulls, and unexpected status values. Distinguish genuine duplicates from valid repeated business events, such as multiple deliveries against a single purchase-order line."
-                    ]
-                  },
-                  {
-                    "tag": "li",
-                    "children": [
-                      "Investigate unusual application behavior with the system owners. Form hypotheses and test them against actual records. Do not assume that a business user understands the underlying database model or that a column name accurately describes its meaning."
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "p",
-                "children": [
-                  "Design the target model according to its consumption pattern. For analytical use cases, a dimensional model with fact and dimension tables may be appropriate. Define fact-table grain, surrogate or business keys, conformed dimensions, and the handling of historical attribute changes (for example, slowly changing dimensions). For operational consumers, a different model may be more suitable."
-                ]
-              },
-              {
-                "tag": "p",
-                "children": [
-                  "In a medallion architecture, Bronze typically preserves source fidelity and ingestion metadata; Silver performs cleansing, standardization, deduplication, and integration; Gold applies business semantics and presents consumption-ready datasets. Assign each transformation to the appropriate layer and document the lineage between them. The resulting design should include an agreed source-to-target mapping, target model, and business-rule specifications."
                 ]
               },
               {
@@ -1049,6 +982,73 @@
                     ]
                   },
                   ", by contrast, defines agreed expectations between a data producer and its consumers: schema, semantics, quality, freshness, compatibility, ownership, and change notification. A source contract governs what the upstream producer supplies; a serving-layer contract governs what the pipeline promises to its consumers. The catalog can reference these contracts, but documentation alone does not enforce them."
+                ]
+              },
+               {
+                "tag": "h3",
+                "children": [
+                  "The transformation"
+                ],
+                "attrs": {
+                  "id": "the-transformation",
+                  "style": "scroll-margin-top: 100px"
+                },
+                "classes": [
+                  "subsection-title"
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Once the source model is understood, work with stakeholders to translate their business requirements into target datasets. This is the ",
+                  {
+                    "tag": "strong",
+                    "children": [
+                      "source-to-target mapping"
+                    ]
+                  },
+                  " phase. Document how each target field is derived, including source columns, join conditions, filters, type conversions, calculations, reference data, and business rules."
+                ]
+              },
+              {
+                "tag": "ul",
+                "children": [
+                  {
+                    "tag": "li",
+                    "children": [
+                      "Prototype the transformations and joins in SQL or an equivalent processing framework. Use representative source records to validate the mapping before implementing the production pipeline."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      "For every input and output table, establish its grain, candidate keys, primary and foreign keys, and join cardinality (one-to-one, one-to-many, or many-to-many). Check for join fan-out, which can inflate aggregates when records are unintentionally multiplied."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      "Profile duplicate keys, orphaned records, nulls, and unexpected status values. Distinguish genuine duplicates from valid repeated business events, such as multiple deliveries against a single purchase-order line."
+                    ]
+                  },
+                  {
+                    "tag": "li",
+                    "children": [
+                      "Investigate unusual application behavior with the system owners. Form hypotheses and test them against actual records. Do not assume that a business user understands the underlying database model or that a column name accurately describes its meaning."
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "Design the target model according to its consumption pattern. For analytical use cases, a dimensional model with fact and dimension tables may be appropriate. Define fact-table grain, surrogate or business keys, conformed dimensions, and the handling of historical attribute changes (for example, slowly changing dimensions). For operational consumers, a different model may be more suitable."
+                ]
+              },
+              {
+                "tag": "p",
+                "children": [
+                  "In a medallion architecture, Bronze typically preserves source fidelity and ingestion metadata; Silver performs cleansing, standardization, deduplication, and integration; Gold applies business semantics and presents consumption-ready datasets. Assign each transformation to the appropriate layer and document the lineage between them. The resulting design should include an agreed source-to-target mapping, target model, and business-rule specifications."
                 ]
               },
               {
