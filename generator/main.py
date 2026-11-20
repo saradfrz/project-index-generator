@@ -89,6 +89,41 @@ def build(root=ROOT):
         raise ValueError('Unexpected closing tag in CSS or JavaScript')
     env = Environment(loader=FileSystemLoader(root / 'templates'), autoescape=True,
                       undefined=StrictUndefined, trim_blocks=True, lstrip_blocks=True)
+    def walk(nodes):
+        for node in nodes:
+            if isinstance(node, dict):
+                yield node
+                yield from walk(resolve(node)['children'])
+
+    def has_class(node, name):
+        return name in resolve(node)['classes']
+
+    def set_label(node, label):
+        return node.setdefault('attrs', {}).setdefault('data-number', label)
+
+    chapters = [node for node in walk(page) if has_class(node, 'numbered-chapter')]
+    labels = {}
+    for index, chapter in enumerate(chapters, 1):
+        chapter_id = resolve(chapter)['attrs'].get('id')
+        if chapter_id:
+            labels['#' + chapter_id] = str(index)
+        subsection = 0
+        for node in walk(resolve(chapter)['children']):
+            if has_class(node, 'chapter-title'):
+                set_label(node, f'{index:02}/{len(chapters):02}')
+            elif has_class(node, 'subsection-title'):
+                subsection += 1
+                label = set_label(node, f'{index}.{subsection}')
+                target = resolve(node)['attrs'].get('id')
+                if target:
+                    labels['#' + target] = label
+
+    for node in walk(page):
+        if has_class(node, 'summary-chapter') or has_class(node, 'summary-subsection'):
+            target = resolve(node)['attrs'].get('href')
+            if target in labels:
+                set_label(node, labels[target])
+
     env.globals.update(resolve=resolve, void_tags=VOID_TAGS)
     html = env.get_template('index.html').render(site=site, page=page, css=css, javascript=javascript)
     destination = root.parent / 'output' / name

@@ -37,7 +37,7 @@
           {
             "tag": "nav",
             "children": [
-                            {
+              {
                 "tag": "a",
                 "text": "Portfolio",
                 "attrs": {
@@ -271,22 +271,28 @@
                             "text": "Business discovery and requirements",
                             "attrs": {
                               "href": "#business-discovery-and-requirements"
-                            }
+                            },
+                            "classes": [
+                              "summary-chapter"
+                            ]
                           }
                         ]
                       },
                       {
-                        "tag": "ul",
+                        "tag": "ol",
                         "children": [
                           {
                             "tag": "li",
                             "children": [
                               {
                                 "tag": "a",
-                                "text": "1.1 Define the goal",
+                                "text": "Define the goal",
                                 "attrs": {
                                   "href": "#define-the-goal"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -295,10 +301,13 @@
                             "children": [
                               {
                                 "tag": "a",
-                                "text": "Asses the source systems",
+                                "text": "Identify the source systems",
                                 "attrs": {
-                                  "href": "#asses-the-source-systems"
-                                }
+                                  "href": "#identify-the-source-systems"
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -307,10 +316,13 @@
                             "children": [
                               {
                                 "tag": "a",
-                                "text": "The source data",
+                                "text": "Profile the source data",
                                 "attrs": {
-                                  "href": "#the-source-data"
-                                }
+                                  "href": "#profile-the-source-data"
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -322,7 +334,10 @@
                                 "text": "Reverse engineer the source data modeling",
                                 "attrs": {
                                   "href": "#reverse-engineer-the-source-data-modeling"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -334,7 +349,10 @@
                                 "text": "The transformation",
                                 "attrs": {
                                   "href": "#the-transformation"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -346,7 +364,10 @@
                                 "text": "Data governance",
                                 "attrs": {
                                   "href": "#data-governance"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -358,7 +379,10 @@
                                 "text": "Data catalog",
                                 "attrs": {
                                   "href": "#data-catalog"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -370,10 +394,16 @@
                                 "text": "Data lifecycle management",
                                 "attrs": {
                                   "href": "#data-lifecycle-management"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           }
+                        ],
+                        "classes": [
+                          "summary-sections"
                         ]
                       }
                     ],
@@ -392,12 +422,15 @@
                             "text": "The engineering decisions",
                             "attrs": {
                               "href": "#the-engineering-decisions"
-                            }
+                            },
+                            "classes": [
+                              "summary-chapter"
+                            ]
                           }
                         ]
                       },
                       {
-                        "tag": "ul",
+                        "tag": "ol",
                         "children": [
                           {
                             "tag": "li",
@@ -407,7 +440,10 @@
                                 "text": "Historical and incremental processing",
                                 "attrs": {
                                   "href": "#historical-and-incremental-processing"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -419,7 +455,10 @@
                                 "text": "Pipeline state and execution control",
                                 "attrs": {
                                   "href": "#pipeline-state-and-execution-control"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -431,7 +470,10 @@
                                 "text": "Data correction and recovery",
                                 "attrs": {
                                   "href": "#data-correction-and-recovery"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -443,10 +485,16 @@
                                 "text": "Storage and performance optimization",
                                 "attrs": {
                                   "href": "#storage-and-performance-optimization"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           }
+                        ],
+                        "classes": [
+                          "summary-sections"
                         ]
                       }
                     ],
@@ -465,12 +513,15 @@
                             "text": "Implementation",
                             "attrs": {
                               "href": "#implementation"
-                            }
+                            },
+                            "classes": [
+                              "summary-chapter"
+                            ]
                           }
                         ]
                       },
                       {
-                        "tag": "ul",
+                        "tag": "ol",
                         "children": [
                           {
                             "tag": "li",
@@ -480,7 +531,10 @@
                                 "text": "Ingestion, transformations, orchestration, and configuration management",
                                 "attrs": {
                                   "href": "#ingestion-transformations-orchestration-and-configuration-management"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -492,7 +546,10 @@
                                 "text": "Testing & Data Quality",
                                 "attrs": {
                                   "href": "#testing-data-quality"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -504,7 +561,10 @@
                                 "text": "Deployment",
                                 "attrs": {
                                   "href": "#deployment"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -516,7 +576,10 @@
                                 "text": "Production Operations",
                                 "attrs": {
                                   "href": "#production-operations"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           },
@@ -528,10 +591,16 @@
                                 "text": "Business Validation",
                                 "attrs": {
                                   "href": "#business-validation"
-                                }
+                                },
+                                "classes": [
+                                  "summary-subsection"
+                                ]
                               }
                             ]
                           }
+                        ],
+                        "classes": [
+                          "summary-sections"
                         ]
                       }
                     ],
@@ -563,18 +632,14 @@
         "tag": "section",
         "children": [
           {
-            "tag": "div",
-            "text": "01 / 03",
-            "classes": [
-              "num"
-            ]
-          },
-          {
             "tag": "h2",
             "text": "Business discovery and requirements",
             "attrs": {
               "id": "heading-business-discovery-and-requirements"
-            }
+            },
+            "classes": [
+              "chapter-title"
+            ]
           },
           {
             "tag": "div",
@@ -588,12 +653,15 @@
               {
                 "tag": "h3",
                 "children": [
-                  "1.1 Define the goal"
+                  "Define the goal"
                 ],
                 "attrs": {
                   "id": "define-the-goal",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -616,19 +684,14 @@
               {
                 "tag": "h3",
                 "children": [
-                  "Assess the source systems"
+                  "Identify the source systems"
                 ],
                 "attrs": {
-                  "id": "identify-the-source-system",
+                  "id": "identify-the-source-systems",
                   "style": "scroll-margin-top: 100px"
-                }
-              },
-
-              {
-                "tag": "h3",
-                "children": [
-                  
-                  "Identify the source systems"
+                },
+                "classes": [
+                  "subsection-title"
                 ]
               },
               {
@@ -718,33 +781,29 @@
               {
                 "tag": "h3",
                 "children": [
-                  "The source data"
+                  "Profile the source data"
                 ],
                 "attrs": {
-                  "id": "the-source-data",
+                  "id": "profile-the-source-data",
                   "style": "scroll-margin-top: 100px"
-                }
-              },
-              {
-                "tag": "p",
-                "children": [
-                  "Identify the tables, files, API resources, or event topics that must be consumed. Conduct ",
-                  {
-                    "tag": "strong",
-                    "children": [
-                      "data profiling"
-                    ]
-                  },
-                  " to understand row counts, data types, null rates, distinct values, duplicate keys, value distributions, date ranges, and anomalous records."
+                },
+                "classes": [
+                  "subsection-title"
                 ]
               },
-              {
+                            {
+                "tag": "p",
+                "children": [
+                  "Identify the tables, files, API resources, or event topics that must be consumed. Conduct data profiling to understand row counts, data types, null rates, distinct values, duplicate keys, value distributions, date ranges, and anomalous records."
+                ]
+              },
+                            {
                 "tag": "p",
                 "children": [
                   "Estimate both historical volume and the expected daily or hourly change volume, including inserts, updates, and deletes. Record average and peak throughput, file sizes, growth rates, and the size of the initial extraction. A billion-row source table with a small daily delta presents a very different design problem from a source that changes millions of records every hour."
                 ]
               },
-              {
+                            {
                 "tag": "p",
                 "children": [
                   "Also establish the availability of primary keys, modification timestamps, sequence numbers, and CDC metadata. These determine whether reliable incremental extraction is feasible. Document source retention, historical coverage, schema-change behavior, and extraction constraints. Where timestamps are used, distinguish business event time from the time a record is created, modified, or ingested."
@@ -758,7 +817,10 @@
                 "attrs": {
                   "id": "reverse-engineer-the-source-data-modeling",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -792,7 +854,10 @@
                 "attrs": {
                   "id": "the-transformation",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -856,7 +921,10 @@
                 "attrs": {
                   "id": "data-governance",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -911,7 +979,10 @@
                 "attrs": {
                   "id": "data-catalog",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -988,7 +1059,10 @@
                 "attrs": {
                   "id": "data-lifecycle-management",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -1117,7 +1191,8 @@
         ],
         "classes": [
           "section",
-          "wrap"
+          "wrap",
+          "numbered-chapter"
         ],
         "attrs": {
           "id": "business-discovery-and-requirements",
@@ -1128,18 +1203,14 @@
         "tag": "section",
         "children": [
           {
-            "tag": "div",
-            "text": "02 / 03",
-            "classes": [
-              "num"
-            ]
-          },
-          {
             "tag": "h2",
             "text": "The engineering decisions",
             "attrs": {
               "id": "heading-the-engineering-decisions"
-            }
+            },
+            "classes": [
+              "chapter-title"
+            ]
           },
           {
             "tag": "div",
@@ -1158,7 +1229,10 @@
                 "attrs": {
                   "id": "historical-and-incremental-processing",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -1293,7 +1367,10 @@
                 "attrs": {
                   "id": "pipeline-state-and-execution-control",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -1410,7 +1487,10 @@
                 "attrs": {
                   "id": "data-correction-and-recovery",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -1527,7 +1607,10 @@
                 "attrs": {
                   "id": "storage-and-performance-optimization",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -1632,7 +1715,8 @@
         ],
         "classes": [
           "section",
-          "wrap"
+          "wrap",
+          "numbered-chapter"
         ],
         "attrs": {
           "id": "the-engineering-decisions",
@@ -1643,18 +1727,14 @@
         "tag": "section",
         "children": [
           {
-            "tag": "div",
-            "text": "03 / 03",
-            "classes": [
-              "num"
-            ]
-          },
-          {
             "tag": "h2",
             "text": "Implementation",
             "attrs": {
               "id": "heading-implementation"
-            }
+            },
+            "classes": [
+              "chapter-title"
+            ]
           },
           {
             "tag": "div",
@@ -1673,7 +1753,10 @@
                 "attrs": {
                   "id": "ingestion-transformations-orchestration-and-configuration-management",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -1707,7 +1790,10 @@
                 "attrs": {
                   "id": "testing-data-quality",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -1761,7 +1847,10 @@
                 "attrs": {
                   "id": "deployment",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -1802,7 +1891,10 @@
                 "attrs": {
                   "id": "production-operations",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -1837,7 +1929,10 @@
                 "attrs": {
                   "id": "business-validation",
                   "style": "scroll-margin-top: 100px"
-                }
+                },
+                "classes": [
+                  "subsection-title"
+                ]
               },
               {
                 "tag": "p",
@@ -1871,7 +1966,8 @@
         ],
         "classes": [
           "section",
-          "wrap"
+          "wrap",
+          "numbered-chapter"
         ],
         "attrs": {
           "id": "implementation",
